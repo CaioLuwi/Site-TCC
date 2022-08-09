@@ -1,0 +1,245 @@
+
+body{
+    line-height: 1.5;
+}
+
+*{
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:before, :after{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+:root {
+    --rosa: #E9496C;
+    --marrom: #8D4331;
+    --branco: #ffff;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.v-center{
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*header */
+
+.header{
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    padding: 15px;
+}
+
+.logo{
+    margin-left: 25px;
+    width: 150px;
+    height: auto;
+}
+
+.header .item-left{
+    flex: 0 0 17%;
+}
+
+.header .item-center{
+    flex: 0 0 55%;
+}
+.header .item-right{
+    flex: 0 0 18%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .item-right a{
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--rosa);
+    display: inline-block;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.header .menu > ul > li{
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 25px;
+}
+
+.header .menu > ul > li > a{
+    font-size: 19px;
+    font-weight: 650;
+    position: relative;
+    color: var(--rosa);
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.header .menu > ul > li .sub-menu{
+    position: absolute;
+    z-index: 500;
+    background-color: var(--branco);
+    box-shadow: -2px 2px 70px -25px rgba(0,0,0,3);
+    padding: 20px 30px;
+    transition: all 0.5s ease;
+    margin-top: 25px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header .menu > ul > li.menu-item-has-children:hover .sub-menu{
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.header .menu > ul > li .sub-menu{
+    line-height: 1;
+}
+
+.header .menu > ul > li .sub-menu > ul > li > a{
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 17px;
+    color: var(--rosa);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.header .menu > ul > li .single-column-menu{
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.header .menu > ul > li .sub-menu.mega-menu{
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4{
+    max-width: 1100px;
+    width: 100%;
+}
+
+.header .menu > ul > li .sub-menu > ul > li > a:hover , .header .item-right a:hover, .header .menu > ul > li:hover > a{
+    color: #af1637;
+}
+
+.banner-section{
+    background-color: red;
+    height: 700px;
+    width: 100%;
+    display: block;
+}
+
+.divBusca:hover{
+    background-color: #fc6b8b;
+    transition: ease-in-out 1s;
+}
+
+.divBusca{
+    background-color: #E9496C;
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: #E9496C;
+    width: 320px;  
+    height: 40px;  
+    display: flex;
+    align-items: center;
+}
+
+
+.txtBusca{
+    float: left;
+    background-color: white;
+    padding-left: 15px;
+    border: solid 1px;
+    border-radius: 10px 0 0 10px;
+    border-color: #E9496C;
+    height: 40px;
+    width: 280px;
+    margin-right: 3%;
+}
+
+.txtBusca:focus{
+    border: solid 1px;
+    border-color: #E9496C;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.divBusca input::placeholder{
+    color: #E9496C;
+    height: 26px;
+}
+
+.search-box{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: #8D4331;
+    height: 40px;
+    border-radius: 40px;
+    background:#353b48;
+    padding: 10px;
+}
+
+.search-btn{
+    color: #00a8ff;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    background: #353b48;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    transition: 2s;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height:40px;
+    width: 0px;
+}
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding:0 6px;
+}
+
+.search-box:hover > .search-btn{
+    background: white;
+
+}
+
+
+
