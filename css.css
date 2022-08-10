@@ -8,6 +8,7 @@ body{
     text-decoration: none;
     box-sizing: border-box;
     font-family: Poppins;
+    line-height: 1.5;
 }
 
 :before, :after{
@@ -22,8 +23,10 @@ body{
 
 :root {
     --rosa: #E9496C;
+    --rosaclaro: #fd5d80;
     --marrom: #8D4331;
     --branco: #ffff;
+    --rosahover: #af1637;
 }
 
 .row{
@@ -50,14 +53,15 @@ a{
 .header{
     display: block;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 99;
-    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.863);
+    padding: 10px;
 }
 
 .logo{
     margin-left: 25px;
-    width: 150px;
+    width: 110px;
     height: auto;
 }
 
@@ -66,7 +70,7 @@ a{
 }
 
 .header .item-center{
-    flex: 0 0 55%;
+    flex: 0 0 59%;
 }
 .header .item-right{
     flex: 0 0 18%;
@@ -110,6 +114,19 @@ a{
     visibility: hidden;
 }
 
+.header .menu > ul > li .sub-menu .mega-menu > .list-item > ul > li{
+    line-height: 1;
+    display: block;
+}
+
+.product-menu a{
+    padding: 10px 0;
+    display: inline-block;
+    font-size: 15px;
+    color: var(--marrom);
+    transition: color 0.3s ease;
+}
+
 .header .menu > ul > li.menu-item-has-children:hover .sub-menu{
     margin-top: 0;
     visibility: visible;
@@ -129,6 +146,8 @@ a{
     text-decoration: none;
 }
 
+/* Mudar elementos do menu grande */
+
 .header .menu > ul > li .single-column-menu{
     min-width: 280px;
     max-width: 350px;
@@ -139,13 +158,51 @@ a{
     transform: translateX(-50%)
 }
 
+.header .menu > ul > li .sub-menu.mega-menu > ul > li{
+    line-height: 1;
+    display: block;
+}
+
 .header .menu > ul > li .sub-menu.mega-menu-column-4{
     max-width: 1100px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 15px
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title{
+    font-size: 17px;
+    color: var(--rosaclaro);
+    font-weight: 600;
+    line-height: 1;
+    padding: 10px 0;
+    transition: color 0.4s ease;
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title:hover{
+    color: var(--rosahover);
+}
+
+.title{
+    font-size: 23px;
+    color: var(--rosaclaro);
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item{
+    flex: 0 0 25%;
+    padding: 0 15px;
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
 }
 
 .header .menu > ul > li .sub-menu > ul > li > a:hover , .header .item-right a:hover, .header .menu > ul > li:hover > a{
-    color: #af1637;
+    color: var(--rosahover);
 }
 
 .banner-section{
@@ -197,10 +254,107 @@ a{
     color: #E9496C;
     height: 26px;
 }
-
+/*BARRA DE PESQUISA*/
 .search-box{
-    position: absolute;
-    
+    position: relative;
+    height: 35px;
+    width: 230px;
+    align-items: center;
+    display: flex;
+}
+
+.search-box input{
+    background-color: #ffffff00;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 2px var(--rosahover);
+    font-size: 15px;
+}
+
+.search-box input::placeholder{
+    color: var(--rosa);
+    font-size: 14px;
+}
+
+.search-txt{
+    background: none;
+    border: 0;
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    transition: 0.4s;
+    font-size: 12px;
+    width: 0;
+}
+
+.search-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #fc6b8b;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.search-box:hover > .search-txt{
+ width: 340px;
+}
+
+#info-slide{
+    max-width: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+#info1{
+   
+    max-width: 280px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    font-size: 25px;
+}
+
+#info2{
+   
+    max-width: 300px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    font-size: 25px;
+}
+
+#info3{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    font-size: 25px;
+}
+
+.fa-cart-circle-check{
+    width: 50px;
+}
+
+#info-slide2{
+    display: flex;
+    margin: 0 45px 0;
+
+    color: #fc6b8b;
+    font-size: 23px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+#container_main_produtos{
+    max-width: 1920px;
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
 }
 
 
