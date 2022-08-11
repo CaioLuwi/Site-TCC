@@ -125,6 +125,7 @@ a{
     font-size: 15px;
     color: var(--marrom);
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .header .menu > ul > li.menu-item-has-children:hover .sub-menu{
@@ -201,7 +202,7 @@ a{
     border-radius: 5px;
 }
 
-.header .menu > ul > li .sub-menu > ul > li > a:hover , .header .item-right a:hover, .header .menu > ul > li:hover > a{
+.product-menu a:hover, .header .menu > ul > li .sub-menu > ul > li > a:hover , .header .item-right a:hover, .header .menu > ul > li:hover > a{
     color: var(--rosahover);
 }
 
